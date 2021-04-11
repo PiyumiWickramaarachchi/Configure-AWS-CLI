@@ -1,0 +1,49 @@
+=====Install the AWS CLI version 2 on Linux======================================
+https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-linux.html#cliv2-linux-prereq
+
+#curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+#unzip awscliv2.zip  (yum install unzip)
+#sudo ./aws/install
+#aws --version
+
+/usr/local/bin/aws --version
+/usr/local/bin/aws s3 ls    ====> see not access
+
+
+
+=====Set IAM user (User name -> s3_bob)==========================================
+
+go IAM -> add user (s3_tom)-> select access type -> add existing policy -> create user
+
+User - s3_tom
+Access key ID - AKIAQFINNSJ5DMOHVS6I
+Secret access key - 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
+
+
+
+===== aws configre==============================================================
+/usr/local/bin/aws configure help 
+
+[root@ip-172-31-86-4 ~]# /usr/local/bin/aws configure
+AWS Access Key ID [None]: AKIAQFINNSJ5DMOHVS6I
+AWS Secret Access Key [None]: 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
+Default region name [None]: us-east-1
+Default output format [None]:
+
+======= create a S3 buckt=====================================================
+/usr/local/bin/aws s3 mb help
+
+/usr/local/bin/aws s3 mb s3://s3bucketforbackup/
+
+/usr/local/bin/aws s3 ls s3://s3bucketforbackup/
+touch s3test
+/usr/local/bin/aws s3 cp s3test s3://s3bucketforbackup/
+/usr/local/bin/aws s3 ls s3://s3bucketforbackup/
+
+
+======if successfully uploaded ====>
+echo $?   => if above code success, return 0
+0
+
+
+
