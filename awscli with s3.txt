@@ -16,8 +16,8 @@ https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-linux.html#cliv2-
 go IAM -> add user (s3_tom)-> select access type -> add existing policy -> create user
 
 User - s3_tom
-Access key ID - AKIAQFINNSJ5DMOHVS6I
-Secret access key - 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
+Access key ID - XXXXXXXXXXXXXX
+Secret access key - XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 
 
